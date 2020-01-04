@@ -18,14 +18,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 //Old connection: "mongodb://user1:password1@ds125871.mlab.com:25871/heroku_0xn0jnk7"
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/g-books",
-  {
-    useCreateIndex: true,
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  }
-);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/g-books", {useNewUrlParser: true,useUnifiedTopology: true});
 
 // Start the API server
 app.listen(PORT, () =>

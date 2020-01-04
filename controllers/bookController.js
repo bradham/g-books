@@ -18,6 +18,11 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
+    console.log("create called");
+    console.log("db in create: " + JSON.stringify(db));
+    console.log("req.body is " + JSON.stringify(req.body));
+    console.log("model is " + db.Book);
+
     db.Book
       .create(req.body)
       .then(dbModel => res.json(dbModel))
