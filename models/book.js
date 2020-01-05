@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 
 const bookSchema = new Schema({
-  //SEE homework instruction number 4
   googleId: String,
   title: { type: String, required: true},
   subtitle: String,
